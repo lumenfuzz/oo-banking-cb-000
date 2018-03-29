@@ -1,5 +1,5 @@
 class BankAccount
-  attr_reader :name, :balance
+  attr_reader :name, :balance, :status
 
   def initialize(name)
     @name = name
@@ -12,7 +12,7 @@ class BankAccount
   end
 
   def display_balance
-    "Your balance is $#{avi.balance}."
+    "Your balance is $#{self.balance}."
   end
 
   def valid?
