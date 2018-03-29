@@ -1,5 +1,5 @@
 class BankAccount
-  attr_reader :name
+  attr_reader :name, :balance
 
   def initialize(name)
     @name = name
@@ -9,5 +9,14 @@ class BankAccount
 
   def deposit(amount)
     @balance += amount
+  end
+
+  def display_balance
+    "Your balance is $#{avi.balance}."
+  end
+
+  def valid?
+    return false if @balance <= 0 || @status == "closed"
+    return true
   end
 end
